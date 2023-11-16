@@ -9,17 +9,21 @@ Obs: This helper implements only the "get" operation.
 ### pass
 Configure the Password Store in the following structure: hostname/username
 
-Ex.: pass insert github.com/me@email.com
+Ex.: 
+```
+pass insert local-gitlab.net/me@email.com
+pass insert github.com/myusername
+```
 
 ### git
 Configure .gitconfig. Ex.:
 ```
-[credential "http://mylocalgitlabinstance.local"]
+[credential "http://local-gitlab.net"]
     username = me@email.com
     helper = pass
 
 [credential "https://github.com"]
-    username = me@email.com
+    username = myusername
     helper = pass
 ```
 
